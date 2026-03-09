@@ -1,0 +1,11 @@
+@media (min-width: 1650px){
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1290px !important;
+        padding: 0;
+    }
+}
