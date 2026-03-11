@@ -1,0 +1,36 @@
+.scroll-to-top-button{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 200;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 208, 97, 1);
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease-out;
+}
+.scroll-to-top-button:hover{
+    animation: animate-pulse 3s linear infinite;
+}
+@keyframes animate-pulse{
+    0% {
+        box-shadow: 0 0 #41db89, 0 0 #00D061;
+    }
+    40% {
+        box-shadow: 0 0 0 50px #ff6d4a00, 0 0 #00D061;
+    }
+    80% {
+        box-shadow: 0 0 0 50px #ff6d4a00, 0 0 0 30px #ff6d4a00;
+    }
+    100% {
+        box-shadow: 0 0 #ff6d4a00, 0 0 0 30px #ff6d4a00;
+    }
+}
+.scroll-to-top-button img{
+    transform: rotate(-45deg);
+}

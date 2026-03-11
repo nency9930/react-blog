@@ -1,5 +1,6 @@
 import '../assets/css/testimonials.css';
 import '../assets/css/media-query.css';
+import { useState } from "react";
 import quote from '../assets/images/testimonial/testimonial-quote.svg';
 import stars from '../assets/images/testimonial/testimonial-star.svg';
 import person1 from '../assets/images/testimonial/testimonial-person1.png';
@@ -83,14 +84,42 @@ const testimonials = [
         img: person9,
         name: 'Emily Davis',
         date: '6 April 2025'
-    }
+    },
+    {
+        quoteImg: quote,
+        starImg: stars,
+        text: '"I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!"',
+        img: person1,
+        name: 'Ariana Green',
+        date: '8 May 2025'
+    },
+    {
+        quoteImg: quote,
+        starImg: stars,
+        text: '"Fantastic service and reliable support every time. They really take the time to understand our needs and offer effective solutions."',
+        img: person2,
+        name: 'Ethan Moore',
+        date: '1 May 2025'
+    },
+    {
+        quoteImg: quote,
+        starImg: stars,
+        text: '"Professional, efficient, and extremely helpful. They consistently deliver beyond our expectations with every request."',
+        img: person3,
+        name: 'Amanda Lee',
+        date: '28 April 2025'
+    },
 ]
 function Testimonials() {
+    const [visible, setVisible] = useState(9);
+    const loadMore = () => {
+        setVisible(visible + 9);
+    };
     return (
         <section className="container">
             <div className="testimonial-grid">
                 {
-                    testimonials.map((item, index) => (
+                    testimonials.slice(0, visible).map((item, index) => (
                         <div className="testimonial-card d-flex flex-column justify-content-between" key={index}>
                             <div className="testimonial-card-top-container">
                                 <img src={item.quoteImg} alt="quote-img" />
@@ -104,7 +133,7 @@ function Testimonials() {
                                 <p className="mb-0 testimonial-para">{item.text}</p>
                             </div>
                             <div className="testimonial-card-bottom-container d-flex align-items-center">
-                                <img src={item.img} alt={item.name} />
+                                <img src={item.img} alt={item.name} className="testimonial-img" />
                                 <div className="testimonial-person-details d-flex flex-column">
                                     <p className="mb-0 testimonial-person-name">{item.name}</p>
                                     <p className="mb-0 testimonial-person-date">{item.date}</p>
@@ -114,6 +143,13 @@ function Testimonials() {
                     ))
                 }
             </div>
+            {
+                visible < testimonials.length && (
+                    <button onClick={loadMore} className="get-a-quote-btn load-more-btn mx-auto">
+                        <span>Load More</span>
+                    </button>
+                )
+            }
         </section>
     )
 }

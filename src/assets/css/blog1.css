@@ -1,0 +1,106 @@
+.masonry-grid{
+    column-count: 3;
+    column-gap: 30px;
+}
+.latest-news-grid-card{
+    margin-bottom: 54px;
+}
+.latest-news-grid-card .latest-news-grid-card-animate{
+    border-radius: 20px;
+}
+.latest-news-grid-card .latest-news-grid-card-animate::before{
+    content: "";
+    position: absolute;
+    inset: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(0, 208, 97, 0.18);
+    transform: translate(-50%, -50%);
+    transition: width 0.8s ease, height 0.8s ease;
+    pointer-events: none;
+}
+.latest-news-grid-card:hover .latest-news-grid-card-animate::before{
+    width: 220%;
+    height: 220%;
+}
+.latest-news-grid-card .latest-news-grid-card-animate img{
+    height: auto;
+    border-radius: 20px;
+}
+.latest-news-card-content{
+    gap: 20px;
+    padding: 20px 0 15px 0;
+}
+.latest-news-hr-line{
+    width: 30px;
+    height: 4px;
+    background: rgba(34, 34, 34, 1);
+}
+.latest-news-date{
+    gap: 15px;
+}
+.latest-news-date p{
+    color: rgba(34, 34, 34, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.latest-news-date .latest-news-vertical-line{
+    width: 2px;
+    height: 16px;
+    background-color: rgba(168, 169, 173, 1);
+}
+.latest-news-date span{
+    color: rgba(168, 169, 173, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.blog1-ellipsis-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.latest-news-grid-card .latest-news-grid-card-h3{
+    color: rgba(0, 0, 0, 1);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    padding-left: 50px;
+    transition: color 0.3s ease-in-out;
+}
+.latest-news-grid-card .latest-news-grid-card-animate:hover ~ .latest-news-grid-card-h3, 
+.latest-news-grid-card .latest-news-grid-card-h3:hover{
+    color: #00D061; 
+}
+.blog-pagination{
+    gap: 20px;
+    padding-top: 60px;
+}
+.blog-pagination a{
+    max-width: 60px;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    border: 2px solid rgba(245, 246, 247, 1);
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+.blog-pagination .blog-pagination-active, .blog-pagination a:hover{
+    background: #000;
+    color: #FFF;
+    border: none;
+}
+.blog-pagination .blog-pagination-arrows{
+    background: rgba(245, 246, 247, 1);
+}
+.blog-pagination .blog-pagination-arrows:hover img{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(819%) hue-rotate(116deg) brightness(100%) contrast(94%);
+}

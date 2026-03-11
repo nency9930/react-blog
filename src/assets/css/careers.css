@@ -7,6 +7,11 @@
     border-radius: 30px;
     padding: 30px 60px 30px 30px;
     gap: 30px;
+    transition: all 0.3s ease-in-out;
+}
+.careers-box:hover {
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(15px);
 }
 .careers-box-left-content h3{
     color: rgba(0, 0, 0, 1);
@@ -14,19 +19,35 @@
     font-weight: 500;
     line-height: 48px;
 }
-.careers-box-left-content p{
+.careers-box-left-content .careers-box-para{
     color: rgba(34, 34, 34, 1);
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
     padding: 15px 0 20px 0;
 }
-
-
-
-
-
-.get-a-quote-btn {
+.careers-btn-container{
+    gap: 15px;
+}
+.careers-btn{
+    background: rgba(245, 246, 247, 1);
+    border-radius: 10px;
+    padding: 8px 15px;
+    color: rgba(168, 169, 173, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.careers-btn:hover{
+    background: rgba(0, 208, 97, 1);
+    color: #FFF;
+}
+.apply-now-btn{
+    width: 149px;
+}
+.get-a-quote-btn{
     position: relative;
     overflow: hidden;
     border-radius: 30px;
@@ -44,10 +65,7 @@
     border: none;
     outline: none;
 }
-.apply-now-btn {
-    width: 149px;
-}
-.get-a-quote-btn::before, .get-a-quote-btn::after {
+.get-a-quote-btn::before, .get-a-quote-btn::after{
     content: "";
     position: absolute;
     top: 0;
@@ -56,22 +74,17 @@
     background: rgba(0, 208, 97, 1);
     transition: 0.3s ease;
 }
-.get-a-quote-btn::before {
+.get-a-quote-btn::before{
     left: 0;
 }
-.get-a-quote-btn span {
-    position: relative;
-    z-index: 5;
-}
-.get-a-quote-btn::after {
+.get-a-quote-btn::after{
     right: 0;
 }
-.get-a-quote-btn::before, .get-a-quote-btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    background: rgba(0, 208, 97, 1);
-    transition: 0.3s ease;
+.get-a-quote-btn:hover::before, .get-a-quote-btn:hover::after{
+    width: 0%;
+    background: #000;
+}
+.get-a-quote-btn span{
+    position: relative;
+    z-index: 5;
 }

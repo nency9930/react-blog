@@ -1,0 +1,38 @@
+.why-choose-us-container{
+    gap: 110px;
+}
+.why-choose-us-left-container{
+    max-width: 550px;
+    width: 100%;
+    line-height: 0;
+}
+.why-choose-us-left-container img{
+    border-radius: 30px;
+}
+.why-choose-us-right-container{
+    max-width: 630px;
+    width: 100%;
+}
+.why-choose-us-content-container{
+    gap: 10px;
+}
+.why-choose-us-icon-container{
+    gap: 30px;
+}
+.why-choose-us-icon-container h3{
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+}
+.why-choose-us-content-container p{
+    color: rgba(34, 34, 34, 1);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.why-choose-us-hr-line{
+    height: 2px;
+    background: rgba(245, 246, 247, 1);
+    margin: 30px 0;
+}

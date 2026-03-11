@@ -1,0 +1,75 @@
+.pricing-plan-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.pricing-plan-grid-card{
+    background-color: #FFF;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+    padding: 50px 30px 30px 30px;
+}
+.pricing-plan-grid-card h3{
+    color: rgba(0, 0, 0, 1);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 44px;
+}
+.price-box{
+    gap: 8px;
+    padding: 30px 0 40px 0;
+}
+.price-box p{
+    color: rgba(0, 208, 97, 1);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+}
+.price-box span{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.price-list{
+    padding-bottom: 30px;
+}
+.price-list li{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0 0 14px 30px;
+}
+.price-list li:last-child{
+    padding: 0 0 0 30px;
+}
+.price-list li::before{
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    color: rgba(0, 208, 97, 1);
+}
+.get-started-btn{
+    height: 64px;
+}
+.pricing-plan-grid-card.center-card{
+    background-color: rgba(0, 208, 97, 1);
+}
+.pricing-plan-grid-card.center-card h3, 
+.pricing-plan-grid-card.center-card .price-box p,
+.pricing-plan-grid-card.center-card .price-box span,
+.pricing-plan-grid-card.center-card .price-list li,
+.pricing-plan-grid-card.center-card .price-list li::before{
+    color: #FFF;
+}
+.pricing-plan-grid-card.center-card .get-started-btn{
+    background: #FFF;
+    color: rgba(0, 208, 97, 1);
+}
+.pricing-plan-grid-card.center-card .get-a-quote-btn::before,
+.pricing-plan-grid-card.center-card .get-a-quote-btn::after{
+    background: #FFF;
+}

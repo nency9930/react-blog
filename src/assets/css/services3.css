@@ -1,0 +1,84 @@
+.service-solutions3-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.service-solutions3-grid-card{
+    background: #FFF;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+}
+.services3-image-container{
+    line-height: 0;
+}
+.services3-image-container img{
+    border-radius: 30px;
+}
+.services3-logo-container{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: #FFFFFF;
+    animation: animate-pulses 3s linear infinite;
+}
+@keyframes animate-pulses{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.0), 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.0), 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.0), 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+}
+.services3-logo-container img{
+    filter: brightness(0) saturate(100%) invert(70%) sepia(46%) saturate(3893%) hue-rotate(100deg) brightness(92%) contrast(101%);
+    transition: all 0.6s ease;
+}
+.service-solutions3-grid-card:hover .services3-logo-container img{
+    transform: rotateY(180deg);
+}
+.service-solutions3-grid-card-content{
+    padding: 70px 30px 30px 30px;
+    gap: 10px;
+}
+.service-solutions3-grid-card-content h3{
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;    
+    font-weight: 600;
+    line-height: 32px;
+}
+.service-solutions3-grid-card-content p{
+    color: rgba(34, 34, 34, 1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.learn-more-btn{
+    gap: 10px;
+    color: rgba(0, 208, 97, 1);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 20px 0;
+    border-top: 2px solid #F5F6F7;
+    border-radius: 0 0 30px 30px;
+    transition: background 0.6s ease-in-out, color 0.3s ease-in-out;
+}
+.service-solutions3-grid-card:hover .learn-more-btn{
+    background: rgba(0, 208, 97, 1);
+    color: #FFFFFF;
+}
+.learn-more-btn img{
+    transition: transform 0.6s ease-in-out;
+}
+.service-solutions3-grid-card:hover .learn-more-btn img{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(9%) saturate(0%) hue-rotate(140deg) brightness(103%) contrast(101%);
+    transform: rotate(42deg);
+}

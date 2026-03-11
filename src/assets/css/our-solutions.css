@@ -1,0 +1,52 @@
+.our-solutions-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.accordion{
+    --bs-accordion-border-color: none;
+}
+.accordion-item:first-of-type>.accordion-header .accordion-button,
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed{
+    border-radius: 0;
+}
+.accordion-button{
+    background: rgba(245, 246, 247, 1);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.accordion-button:hover{
+    color: rgba(0, 208, 97, 1);
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed){
+    background-color: rgba(0, 208, 97, 0.1) !important;
+    color: rgba(0, 208, 97, 1);
+}
+.accordion-button::after{
+    background-image: url('../images/faq/black-arrow.svg');
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url('../images/faq/green-arrow.svg');
+    transform: rotate(0deg);
+}
+.accordion-body{
+    color: rgba(34, 34, 34, 1);
+    font-size: 16px;    
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0 0 30px 0;
+}
+.accordion-item:last-child .accordion-body{
+    padding: 0;
+}

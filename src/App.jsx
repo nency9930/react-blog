@@ -7,10 +7,32 @@ import ToDo from "./MyComponents/ToDo";
 import Toggle from "./MyComponents/Toggle";
 import User from './MyComponents/User';
 import Login, { Profile, Setting } from "./MyComponents/UserComponent"
-import BrowserRouter from "react-router";
+import { BrowserRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './assets/js/smooth-scrolling.js';
 import './index.css';
+import Projects1 from "./MyComponents/Projects1.jsx";
+import OurTeam from "./MyComponents/OurTeam.jsx";
+import Blog1 from "./MyComponents/Blog1.jsx";
+import OurSolutions from "./MyComponents/OurSolutions.jsx";
+import OurClients from "./MyComponents/OurClients.jsx";
+import Services3 from "./MyComponents/Services3.jsx";
+import CustomCursor from "./MyComponents/CustomCursor.jsx";
+import Services2 from "./MyComponents/Services2.jsx";
+import ScrollToTopButton from "./MyComponents/ScrollToTopButton.jsx";
+import SingleService1 from "./MyComponents/SingleService1.jsx";
+import SingleService2 from "./MyComponents/SingleService2.jsx";
+import SingleService3 from "./MyComponents/SingleService3.jsx";
+import SingleService4 from "./MyComponents/SingleService4.jsx";
+import SingleService5 from "./MyComponents/SingleService5.jsx";
+import SingleService6 from "./MyComponents/SingleService6.jsx";
+import PricingPlan from "./MyComponents/PricingPlan.jsx";
+import Projects2 from "./MyComponents/Projects2.jsx";
+import Portfolio from "./MyComponents/Portfolio.jsx";
+import WhyChooseUs from "./MyComponents/WhyChooseUs.jsx";
 function App() {
   const name = "Nency Kanani";
   let a = 10;
@@ -179,6 +201,26 @@ function App() {
         }
         <Testimonials />
         <Careers />
+        <Projects1 />
+        <OurTeam />
+        <Blog1 />
+        <OurSolutions />
+        <OurClients />
+        <Services3 />
+        <CustomCursor />
+        <Services2 />
+        <ScrollToTopButton />
+        <SingleService1 />
+        <SingleService2 />
+        <SingleService3 />
+        <SingleService4 />
+        <SingleService5 />
+        <SingleService6 />
+        <PricingPlan />
+        <Projects2 />
+        <Portfolio />
+        <WhyChooseUs />
+
 
 
 

@@ -1,26 +1,30 @@
 import '../assets/css/careers.css';
-// import Link from "react-router";
 import { Link } from "react-router-dom";
 const carrers = [
     {
-        name: "Solar Energy Specialist",
-        text: "Be part of our field crew and install advanced solar systems on modern residential rooftops."
+        title: "Solar Energy Specialist",
+        desc: "Be part of our field crew and install advanced solar systems on modern residential rooftops.",
+        location: "On-site"
     },
     {
-        name: "Renewable Energy Engineer",
-        text: "Design optimized solar panel layouts while guaranteeing systems achieve top performance standards."
+        title: "Renewable Energy Engineer",
+        desc: "Design optimized solar panel layouts while guaranteeing systems achieve top performance standards.",
+        location: "Remote"
     },
     {
-        name: "Sustainable Energy Sales Leader",
-        text: "Guide homeowners to embrace solar energy with smart, strategic sales approaches."
+        title: "Sustainable Energy Sales Leader",
+        desc: "Guide homeowners to embrace solar energy with smart, strategic sales approaches.",
+        location: "On-site"
     },
     {
-        name: "Ground Operations Manager",
-        text: "Lead installation crews and coordinate daily field operations to guarantee seamless execution."
+        title: "Ground Operations Manager",
+        desc: "Lead installation crews and coordinate daily field operations to guarantee seamless execution.",
+        location: "Remote"
     },
     {
-        name: "Customer Care Expert",
-        text: "Guide customers through solar product queries, billing concerns, and seamless technical support."
+        title: "Customer Care Expert",
+        desc: "Guide customers through solar product queries, billing concerns, and seamless technical support.",
+        location: "On-site"
     }
 ]
 function Careers() {
@@ -31,12 +35,17 @@ function Careers() {
                     carrers.map((item, index) => (
                         <div className="careers-box d-flex align-items-center justify-content-between" key={index}>
                             <div className="careers-box-left-content">
-                                <h3 className="mb-0">{item.name}</h3>
-                                <p className="mb-0">{item.text}</p>
+                                <h3 className="mb-0">{item.title}</h3>
+                                <p className="mb-0 careers-box-para">{item.desc}</p>
+                                <div className="careers-btn-container d-flex align-items-center">
+                                    <p className="mb-0 careers-btn">{item.location}</p>
+                                    <p className="mb-0 careers-btn">Full-time</p>
+                                </div>
                             </div>
                             <div className="careers-box-right-content">
-                                {/* <Link to="/" className="get-a-quote-btn apply-now-btn">Apply Now</Link> */}
-                                <Link to="/careers">Careers</Link>
+                                <Link to="/careers" className="get-a-quote-btn apply-now-btn">
+                                    <span>Apply Now</span>
+                                </Link>
                             </div>
                         </div>
                     ))
